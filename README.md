@@ -30,7 +30,7 @@ See [Obsidian Help](https://help.obsidian.md/Obsidian+Publish/Customize+your+sit
 - Catppuccin
 - Dracula
 - Everforest
-- Flexoki
+- Flexoki   
 - Gruvbox
 - macOS
 - Nord
@@ -38,3 +38,11 @@ See [Obsidian Help](https://help.obsidian.md/Obsidian+Publish/Customize+your+sit
 - Rosé Pine
 - Solarized
 - Things
+
+# Ephemera Additions
+
+Goals:
+1. Same/similar to editor changes
+2. Import relevant bits from ephemera css
+3. Define color palettes in theme
+4. JS to click to embiggen images

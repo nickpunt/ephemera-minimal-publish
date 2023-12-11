@@ -1,33 +1,3 @@
-/* Ephemera Colors
-   ✨Each color is meaningful✨
-*/
-body {
-  /* Midnight:
-     - background (dark)
-  */
-  --np-midnight: hsl(214, 26%, 12%);
-  /* Sunset:
-     - Nav
-     - Page Description
-     - General Accent
-  */
-  --np-sunset: hsl(32, 100%, 80%);
-  /* Clair de lune:
-     - Text & Headings (dark)
-  */
-  --np-clairdelune: hsl(214, 20%, 88%);
-  /* :
-     - 
-  */
-  /* :
-     - 
-  */
-  /* :
-     - 
-  */
-}
-
-
 /* Default color scheme */
 .theme-light,
 .theme-dark {
@@ -61,7 +31,7 @@ body {
   --hl1:hsla(201,50%,40%,30%);
 }
 .theme-dark {
-  --bg1: var(--np-midnight);
+  --bg1:#262626;
   --bg2:#212121;
   --bg3:hsla(0,0,55%,0.12);
 
@@ -69,11 +39,11 @@ body {
   --ui2:#3B3B3B;
   --ui3:#595959;
 
-  --tx1:var(--np-clairdelune);
+  --tx1:#D1D1D1;
   --tx2:#999999;
   --tx3:#595959;
 
-  --ax1:var(--np-sunset);
+  --ax1:#889EAA;
   --ax2:#ACBBC3;
   --ax3:#67808E;
 

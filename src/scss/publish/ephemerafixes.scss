@@ -1,0 +1,25 @@
+/* Fixes to Minimal 1.0.1 */
+/* TASKS
+- [x] Subtitle below Title .post-description
+*/
+
+/* Image Grid height fix for Safari (informed kepano 2023-12-06) */
+.img-grid .markdown-preview-section>div:has(.image-embed)>p>.internal-embed img {
+  height: unset!important;
+}
+
+/* Page Descriptions (subtitles) */ 
+.markdown-preview-section:has(.post-description) {
+  .page-header { 
+    margin-bottom: 0 !important; 
+  }
+  .post-description { 
+    margin-bottom: 2em; 
+  }
+}
+
+/* Captions, the line below an image */
+.markdown-preview-section figcaption {
+  text-align: center;
+}
+

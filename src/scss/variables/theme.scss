@@ -75,35 +75,35 @@
 
 .theme-light {
 	--interactive-normal:                var(--bg1);
-	--interactive-accent-rgb:            220, 220, 220;
+	--interactive-accent-rgb:            var(--i-a-r);
 
 	/* Highlights from search */
-	--text-highlight-bg:                 rgba(255, 225, 0, 0.5);
-	--text-highlight-bg-active:          rgba(0, 0, 0, 0.1);
+	--text-highlight-bg:                 var(--t-hl-bg);
+	--text-highlight-bg-active:          var(--t-hl-bga);
 
 	/* Errors */
-	--background-modifier-error:         rgba(255,0,0,0.14);
-	--background-modifier-error-hover:   rgba(255,0,0,0.08);
+	--background-modifier-error:         var(--bg-m-e);
+	--background-modifier-error-hover:   var(--bg-m-e-h);
 
 	/* Shadows */
-	--shadow-color:                      rgba(0, 0, 0, 0.1);
-	--btn-shadow-color:                  rgba(0, 0, 0, 0.05);
+	--shadow-color:                      var(--s-c);
+	--btn-shadow-color:                  var(--b-s-c);
 }
 
 .theme-dark {
 	--interactive-normal:                var(--bg3);
-	--interactive-accent-rgb:            66, 66, 66;
+	--interactive-accent-rgb:            var(--i-a-r);
 
 	/* Highlights from search */
-	--text-highlight-bg:                 rgba(255, 177, 80, 0.3);
-	--text-highlight-bg-active:          rgba(255, 255, 255, 0.1);
+	--text-highlight-bg:                 var(--t-hl-bg);
+	--text-highlight-bg-active:          var(--t-hl-bga);
 
 	/* Errors */
-	--background-modifier-error:         rgba(255,20,20,0.12);
-	--background-modifier-error-hover:   rgba(255,20,20,0.18);
+	--background-modifier-error:         var(--bg-m-e);
+	--background-modifier-error-hover:   var(--bg-m-e-h);
 
 	/* Shadows */
-	--background-modifier-box-shadow:    rgba(0, 0, 0, 0.3);
-	--shadow-color:                      rgba(0, 0, 0, 0.3);
-	--btn-shadow-color:                  rgba(0, 0, 0, 0.2);
+	--background-modifier-box-shadow:    var(--bg-m-b-s);
+	--shadow-color:                      var(--s-c);
+	--btn-shadow-color:                  var(--b-s-c);
 }

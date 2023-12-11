@@ -1,20 +1,103 @@
 /* Fixes to Minimal 1.0.1 */
 /* TASKS
+- [x] Update themes.scss to turn hardcoded teritary function colors to theme variables
 - [x] Subtitle below Title .post-description
+- [ ] Figure out how to get gruntfile for public.js so I can build from that
+- [ ] Media Queries with different breakpoints for site-header (NPlogo moves correctly)
+- [ ] Single column, but shows TOC if `cssclasses: show-toc` is set in properties
+      NOTE: Search width of 250px is hardcoded (need to create vars and override). 
+      Total width is --page-width + 250px afaik
+- [ ] Search pane that floats over upon use but is otherwise invisible
 */
+
+// The width of the overall page, taken from my 2018-2023 site
+// $ephemera-width: 1220px;
+// $logo-size: 40px;
 
 /* Image Grid height fix for Safari (informed kepano 2023-12-06) */
 .img-grid .markdown-preview-section>div:has(.image-embed)>p>.internal-embed img {
   height: unset!important;
 }
 
+/* NP Site Header */
+/* 40px of left side width is subtracted from $ephemera-width to make room for the 40px NPlogo */
+.site-header-text {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 20px;
+  width: 1210px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 calc(50vw - 1220px/2) 0 calc(50vw - (1220px/2 - 40px));
+  max-width: 1210px;
+  color: var(--ax1);
+  
+  &:before {
+    content: '';
+    display: block;
+    mask: url("data:image/svg+xml,%0A%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2740%27%20height%3D%2740%27%20fill%3D%27url%28%23NPLogo%29%27%3E%0A%20%20%20%20%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M20%2040C8.9543%2040%200%2031.0457%200%2020S8.9543%200%2020%200s20%208.9543%2020%2020-8.9543%2020-20%2020zm7.7328-26.9438l.5966%203.731c.0062.045.0094.091.0094.1378%200%20.5523-.4477%201-1.0023%201h-1.9879a1.0065%201.0065%200%200%200-.1694.0124c-.5455.0864-.9176.5986-.8312%201.1441l.034.2152.0445.2812.238%201.5036c.0791.4997.5155.8435%201.0076.8435H29.15c2.4154%200%203.7772-1.6746%203.4095-3.9999l-.1234-.7808-.0349-.2205c-.4352-2.7515-.6457-4.0452-.8812-5.531a3.9395%203.9395%200%200%200-.0103-.062l-.2208-1.3937c-.1521-.9606-.9644-1.6645-1.9015-1.6863a607.618%20607.618%200%200%200-.9374-.0006h-.7004A23741.337%2023741.337%200%200%200%2023.813%208.25c-.0566%200-.114.0032-.1719.0124-.5455.0864-.9176.5986-.8278%201.1644l.0125.0813a9150.6941%209150.6941%200%200%200%20.3008%201.8984c.0791.4997.5156.8539%201.0076.8435H26.76c.4822.004.883.3493.9728.8062zM24.125%2030.8778c-1.612-10.1784-2.694-17.01-3.1892-20.1332l-.1278-.8072c-.156-.9847-1.0058-1.687-1.972-1.6874H12.5c-2%200-4%201.6874-4%204v18.475c0%20.4702.4048.875.9.875.7101%200%201.0768%200%201.1.0002%201.1046%200%202-.8954%202-2v-16.35c0-.5477.4403-.9925.9863-.9999l2.8082.0001a.9949.9949%200%200%201%20.5054.1485c.2358.159.4163.4291.473.7853l2.9029%2018.329c.0158.1186.0426.2374.0809.3552.2716.836%201.0664%201.3816%201.8933%201.3816.1022%200%20.2008-.0055.3094-.0205l1.3712-.2172c.341-.054.5736-.3741.516-.735l-.2025-1.2793a1.998%201.998%200%200%200-.019-.1202z%27/%3E%0A%3C/svg%3E%0A") no-repeat;
+    background-color: var(--ax1);
+    top: 0;
+    left: calc(-50px);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-right: calc(50px);
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+
+    &:before {
+      background-color: #fff;
+    }
+  }
+}
+
+// Javascript-added <div class="skew-bg"></div> within .site-body
+// Possibly for only use on some articles, e.g. 'cssclasses: blog'
+.skew-top {
+  height: calc(6vw + 50px);
+  display: grid;
+  min-height: calc(6vw + 50px);
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  position: relative;
+}
+.skew-top-bg {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: -1;
+  position: absolute;
+  top: -55vh;
+  height: calc(100% - 6vw + 180px);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12vw), 0 100%);
+  padding-bottom: calc(6vw + 6%);
+  margin-bottom: calc(-1 * 6vw - 6%);
+  background-size: cover;
+  background-color: hsl(214, 26%, 17%);
+}
+@media (min-width: 1220px) {
+  .skew-top .skew-top-bg {
+    height: calc(100% + 120px);
+  }
+}
 /* Page Descriptions (subtitles) */ 
 .markdown-preview-section:has(.post-description) {
   .page-header { 
     margin-bottom: 0 !important; 
   }
   .post-description { 
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
+    color: var(--ax1);
+    line-height: var(--h5-line-height);
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    font-family: var(--h5-font);
   }
 }
 

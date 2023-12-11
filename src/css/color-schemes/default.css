@@ -1,32 +1,31 @@
-/* Ephemera Colors
+/* Ephemera Default Theme Colors
    ✨Each color is meaningful✨
 */
 body {
-  /* Midnight:
-     - background (dark)
-  */
   --np-midnight: hsl(214, 26%, 12%);
-  /* Sunset:
-     - Nav
+  /* - background (dark)
+  */
+  --np-sunset: hsl(32, 100%, 80%);
+  /* - Nav
      - Page Description
      - General Accent
   */
-  --np-sunset: hsl(32, 100%, 80%);
-  /* Clair de lune:
-     - Text & Headings (dark)
-  */
   --np-clairdelune: hsl(214, 20%, 88%);
-  /* :
-     - 
+  /* - Text & Headings (dark)
   */
-  /* :
-     - 
+  --np-malibu: hsl(201, 88%, 74%);
+  /*
+     - Links
   */
-  /* :
-     - 
+  --np-bluewood: hsl(214, 26%, 25%);
+  /*
+     - highlights background
+  */
+  --np-darkfog: hsl(214, 26%, 17%);
+  /*
+     - Second Background
   */
 }
-
 
 /* Default color scheme */
 .theme-light,
@@ -42,6 +41,15 @@ body {
 }
 
 .theme-light {
+  --i-a-r:    220, 220, 220;
+  --t-hl-bg:  rgba(255, 225, 0, 0.5);
+  --t-hl-bga: rgba(0, 0, 0, 0.1);
+  --bg-m-e:   rgba(255,0,0,0.14);
+  --bg-m-e-h: rgba(255,0,0,0.08);
+  --bg-m-b-s: rgba(0, 0, 0, 0.3);
+  --s-c:      rgba(0, 0, 0, 0.1);
+  --b-s-c:    rgba(0, 0, 0, 0.05);
+  
   --bg1:#FFF;
   --bg2:#F5F5F5;
   --bg3:#E5E5E5;
@@ -61,6 +69,16 @@ body {
   --hl1:hsla(201,50%,40%,30%);
 }
 .theme-dark {
+  --i-a-r:    66, 66, 66;
+  --t-hl-bg:  var(--np-bluewood);
+/*--t-hl-bg:  rgba(255, 177, 80, 0.3);*/
+  --t-hl-bga: rgba(255, 255, 255, 0.1);
+  --bg-m-e:   rgba(255,20,20,0.12);
+  --bg-m-e-h: rgba(255,20,20,0.18);
+  --bg-m-b-s: rgba(0, 0, 0, 0.3);
+  --s-c:      rgba(0, 0, 0, 0.3);
+  --b-s-c:    rgba(0, 0, 0, 0.2);
+
   --bg1: var(--np-midnight);
   --bg2:#212121;
   --bg3:hsla(0,0,55%,0.12);

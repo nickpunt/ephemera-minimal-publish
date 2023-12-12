@@ -24,6 +24,17 @@ module.exports = function(grunt) {
             }
         },
 
+        /* NP: Concatinate javascript files */
+        concat: {
+          options: {
+            separator: ';', // Separates scripts with a semi-colon
+          },
+          dist: {
+            src: ['src/js/**/*.js'], // All JS in the src/js directory
+            dest: 'publish.js', // Output file
+          },
+        },
+
         /* Compile the compressed and uncompressed versions of
         the theme using Sass */ 
         sass: {
@@ -142,9 +153,20 @@ module.exports = function(grunt) {
             css: {
                 files: ['src/**/*.scss','src/**/*.css'],
                 tasks: ['env','sass:dist','cssmin','concat_css']
-            }
+            },
+            scripts: {
+              files: ['src/js/**/*.js'], // Watch all JS files in src/js
+              tasks: ['concat'], // Run concat task on change
+              options: {
+                spawn: false,
+              },
+            }      
         }
     });
+        
+    // NP: Load the plugin that provides the "concat" task.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
     grunt.loadNpmTasks('grunt-env');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -155,4 +177,7 @@ module.exports = function(grunt) {
         grunt.config('OBSIDIAN_PATH', process.env.OBSIDIAN_PATH);
     });
     grunt.registerTask('default',['env:local','loadconst','watch']);
+
+    // NP: Default task(s).
+    grunt.registerTask('default', ['concat', 'watch']);
 }

@@ -3,7 +3,6 @@
 @import 'variables/ephemerabiomes';
 
 /* Publish */
-@import 'publish/ephemerafonts';
 @import 'publish/helpers';
 @import 'publish/image-filters';
 @import 'publish/image-grid';
@@ -21,4 +20,9 @@
 @import 'publish/tooltips';
 
 @import 'publish/mobile';
-@import 'publish/ephemerafixes';
+
+/* Ephemera */
+@import 'ephemera/mixins';
+@import 'ephemera/minimal-fixes';
+@import 'ephemera/fonts';
+@import 'ephemera/navigation';

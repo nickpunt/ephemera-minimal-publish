@@ -67,6 +67,7 @@ body {
   --ax3:#889EAA;
 
   --hl1:hsla(201,50%,40%,30%);
+  --np-nav-hover: var(--np-malibu);
 }
 .theme-dark {
   --i-a-r:    66, 66, 66;
@@ -96,4 +97,5 @@ body {
   --ax3:#67808E;
 
   --hl1:hsla(201,70%,40%,30%);
+  --np-nav-hover: #fff;
 }

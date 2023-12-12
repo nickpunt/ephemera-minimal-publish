@@ -40,9 +40,19 @@ See [Obsidian Help](https://help.obsidian.md/Obsidian+Publish/Customize+your+sit
 - Things
 
 # Ephemera Additions
+Requires: npm
+
+1. Download this
+2. Type `npm install` to get things going.
+3. Type `grunt` to have it watch folder.
+4. Double click `move-files.scpt` to move files to `/Documents/Ephemera`
+5. Publish changes in Obsidian
 
 Goals:
 1. Same/similar to editor changes
 2. Import relevant bits from ephemera css
 3. Define color palettes in theme
 4. JS to click to embiggen images
+
+Changes:
+* Updated Grunt to 1.6.1 from 1.4.1 to incorporate race condition fix

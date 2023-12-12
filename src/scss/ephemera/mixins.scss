@@ -1,0 +1,64 @@
+/*****************************************************************************
+  MIXINS
+******************************************************************************/
+
+
+/*****************************************************************************
+Mobile-first media queries
+https://medium.com/codeartisan/breakpoints-and-media-queries-in-scss-46e8f551e2f2
+******************************************************************************/
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1220px;
+// Fix silly super-large desktops
+$screen-xxl-min: 1600px;
+// Max height no more than 50% of viewport
+$screen-ht-max: 50vh;
+
+// Small widths
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium widths
+@mixin md {
+  @media (min-width: #{$screen-md-min})  {
+    @content;
+  }
+}
+
+// Large widths
+@mixin lg {
+  @media (min-width: #{$screen-lg-min})  {
+    @content;
+  }
+}
+
+// Extra large widths
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Extra large widths
+@mixin xxl {
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+@mixin noselect() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

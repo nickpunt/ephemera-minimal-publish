@@ -1,0 +1,40 @@
+/* Fixes to Minimal 1.0.1 */
+/* TASKS
+- [x] Update themes.scss to turn hardcoded teritary function colors to theme variables
+- [x] Subtitle below Title .post-description
+- [ ] Figure out how to get gruntfile for public.js so I can build from that
+- [ ] Media Queries with different breakpoints for site-header (NPlogo moves correctly)
+- [ ] Single column, but shows TOC if `cssclasses: show-toc` is set in properties
+      NOTE: Search width of 250px is hardcoded (need to create vars and override). 
+      Total width is --page-width + 250px afaik
+- [ ] Search pane that floats over upon use but is otherwise invisible
+*/
+
+// The width of the overall page, taken from my 2018-2023 site
+// $ephemera-width: 1220px;
+// $logo-size: 40px;
+
+/* Image Grid height fix for Safari (informed kepano 2023-12-06) */
+.img-grid .markdown-preview-section>div:has(.image-embed)>p>.internal-embed img {
+  height: unset!important;
+}
+
+/* Page Descriptions (subtitles) */ 
+.markdown-preview-section:has(.post-description) {
+  .page-header { 
+    margin-bottom: 0 !important; 
+  }
+  .post-description { 
+    margin-bottom: 2em;
+    color: var(--ax1);
+    line-height: var(--h5-line-height);
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    font-family: var(--h5-font);
+  }
+}
+
+/* Captions, the line below an image */
+.markdown-preview-section figcaption {
+  text-align: center;
+}

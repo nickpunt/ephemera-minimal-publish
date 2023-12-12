@@ -32,6 +32,7 @@ function buildNavigation() {
   const liButton = document.createElement('li');
   liButton.id = 'nav-light';
   const button = document.createElement('button');
+  button.className = 'nav-link';
   button.setAttribute('onclick', 'handleThemeUpdate()');
   // SVG creation is more complex and typically done by setting innerHTML
   button.innerHTML = `

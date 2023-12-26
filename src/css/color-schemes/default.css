@@ -1,9 +1,10 @@
 /* Ephemera Default Theme Colors
    ✨Each color is meaningful✨
+   2023-12-26 NOTE: I think I should put these in biomes to minimize confusion
 */
 body {
   --np-midnight: hsl(214, 26%, 12%);
-  /* - background (dark)
+  /* - Background (dark)
   */
   --np-sunset: hsl(32, 100%, 80%);
   /* - Nav
@@ -14,16 +15,19 @@ body {
   /* - Text & Headings (dark)
   */
   --np-malibu: hsl(201, 88%, 74%);
-  /*
-     - Links
+  /* - Links (dark)
   */
   --np-bluewood: hsl(214, 26%, 25%);
-  /*
-     - highlights background
+  /* - highlights background
   */
   --np-darkfog: hsl(214, 26%, 17%);
-  /*
-     - Second Background
+  /* - Background (lighter dark)
+  */
+  --np-merino: hsl(39, 49%, 93%);
+  /* - Background (light)
+  */
+  --np-driftwood: hsl(37, 36%, 46%);
+  /* - Links (light)
   */
 }
 
@@ -50,7 +54,7 @@ body {
   --s-c:      rgba(0, 0, 0, 0.1);
   --b-s-c:    rgba(0, 0, 0, 0.05);
   
-  --bg1:#FFF;
+  --bg1:var(--np-merino);
   --bg2:#F5F5F5;
   --bg3:#E5E5E5;
 

@@ -42,7 +42,7 @@ body, .published-container {
   --font-interface-theme: 'Ephemera Sans';
   --font-text-theme: 'Ephemera';
   --ephemera-font-sans: 'Ephemera Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-  /*--font-text: 'Ephemera';*/
+  //--font-text: 'Ephemera';
   --page-title-font: var(--ephemera-font-sans);
   --h1-font: var(--ephemera-font-sans);
   --h2-font: var(--ephemera-font-sans);
@@ -58,9 +58,9 @@ body, .published-container {
   --h6-line-height: var(--line-height-normal);
   --font-text-size: 20px;
   --font-text-size-smaller: 18px;
-  --font-ui-smaller: 13px; /* was 12 */
-  --font-ui-small: 14px; /* was 13 */
-  --font-ui-medium: 16px; /* was 15 */
+  --font-ui-smaller: 13px; // was 12
+  --font-ui-small: 14px; // was 13
+  --font-ui-medium: 16px; // was 15
   --font-ui-large: 20px;
   --popover-font-size: 0.95em;
   --page-title-size: 1.9em;

@@ -1,6 +1,7 @@
 /* Adjust the following variables or find more at the link below */
 /* https://docs.obsidian.md/Reference/CSS+variables/CSS+variables */
-
+/* NP: Ignore this, fix in added fonts.scss 
+   since I want to be able to update minimal theme w/o effort */
 body {
 	/* Font sizes */
 	--font-text-size: 16px;

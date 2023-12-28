@@ -22,7 +22,16 @@
 @import 'publish/mobile';
 
 /* Ephemera */
+/* These are the places where I'm customizing the theme, as I want to support
+   importing changes from future versions of minimal-theme-publish */
 @import 'ephemera/mixins';
 @import 'ephemera/minimal-fixes';
 @import 'ephemera/fonts';
 @import 'ephemera/navigation';
+@import 'ephemera/blockquotes';
+@import 'ephemera/blockreference';
+@import 'ephemera/links';
+@import 'ephemera/tags';
+@import 'ephemera/tooltip';
+@import 'ephemera/highlight';
+@import 'ephemera/lists';

@@ -65,3 +65,27 @@ function buildNavigation() {
 
 // Call the function to build and add the navigation
 buildNavigation();
+
+
+// Hover over logo
+// Function to add hover state
+function addHoverState(element) {
+  element.classList.add('pseudohover');
+}
+
+// Function to remove hover state
+function removeHoverState(element) {
+  element.classList.remove('pseudohover');
+}
+
+// Selecting elements
+const logo = document.querySelector('.site-header-logo');
+const text = document.querySelector('.site-header-text');
+
+// Adding event listeners to the logo
+logo.addEventListener('mouseenter', () => addHoverState(text));
+logo.addEventListener('mouseleave', () => removeHoverState(text));
+
+// Adding event listeners to the text
+text.addEventListener('mouseenter', () => addHoverState(logo));
+text.addEventListener('mouseleave', () => removeHoverState(logo));

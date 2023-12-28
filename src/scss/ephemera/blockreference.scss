@@ -1,0 +1,58 @@
+/* 2023-12-26 Imported from 2023 Ephemera css, both block reference & backlinks */ 
+
+/* #region ✅ Block References GOOD */
+/* 2023-03-01 I think this is ok */
+/***************** Block References *******************/
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+/* TODO get rid of .markdown-preview-view elsewhere in here */
+.markdown-embed .markdown-preview-view {
+  padding: 0;
+}
+.published-container .markdown-preview-sizer {
+  padding: 0;
+}
+.markdown-embed-link, .file-embed-link {
+  top: 8px;
+  right: 0px;
+}
+.markdown-embed .markdown-preview-view blockquote {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* create margin on right for the little link icon */
+.markdown-embed .markdown-embed-content {
+  margin-right: 30px;
+}
+/* for single paragraphs or end paragraphs of an embed so they don't add margin,
+since embeds already are wrapped in 'p's with margins */
+/*.markdown-embed .markdown-preview-view p:last-of-type {
+  margin-bottom: 0;
+}*/
+/* override here, why did they include this */
+/*.markdown-preview-view .markdown-embed-content p:first-child {
+  margin-top: 0;
+}*/
+/* Fix for 'naked' block refs, had to tweak bc they add extra divs, it might not work */
+/* via https://forum.obsidian.md/t/naked-embeds-css-tweak/72 */
+.markdown-preview-view .markdown-embed-content { max-height: unset;}
+.markdown-preview-view .markdown-embed-content>:first-child,
+.markdown-preview-view .markdown-embed-content h1:first-child,
+.markdown-preview-view .markdown-embed-content h2:first-child,
+.markdown-preview-view .markdown-embed-content h3:first-child,
+.markdown-preview-view .markdown-embed-content h4:first-child,
+.markdown-preview-view .markdown-embed-content p:first-child { margin-top: 0; }
+.markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
+/* #endregion */
+
+/* #region ⛔️ Backlinks TODO */
+/* 2023-03-01 TODO: its not boxed yet */
+/* A more transparent background color for backlinks to match blockquote background */
+.published-container .backlinks {
+  background-color: var(--background-blockquote);
+}
+/* #endregion */

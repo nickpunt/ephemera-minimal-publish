@@ -1,0 +1,38 @@
+/* 2023-12-26 Imported from 2023 Ephemera css
+   - [ ] Fix external link design (currently has bg icon)
+   - [ ] Add gradient to links 
+*/
+
+.publish-renderer {
+    a {
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    padding: 0px 0px 1px 0px;
+    border-color: var(--text-link-border);
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: var(--text-accent-background-hover);
+    border-color: var(--text-accent-background-hover);
+  }
+  /* Fix footnote links from changing line height */
+  /* https://stackoverflow.com/questions/1530685/html-sup-tag-affecting-line-height-how-to-make-it-consistent */
+  sup {
+    vertical-align: text-bottom !important;
+    position: relative;
+    top: -0.4em;
+    font-size: 0.7em;
+    letter-spacing: -0.07em;
+  }
+  /* no underline for footnote links or links without pages */
+  sup a, a.is-unresolved {
+    border-bottom: 0;
+  }
+  a.is-unresolved:hover {
+    cursor: not-allowed;
+  }
+  .external-link,
+  .markdown-preview-view .internal-link {
+    text-decoration: none;
+  }
+}

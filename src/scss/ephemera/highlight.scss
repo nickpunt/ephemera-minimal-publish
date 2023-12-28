@@ -1,0 +1,38 @@
+/* 2023-12-26 Imported from 2023 Ephemera css */ 
+
+/* ✅ Highlight Headings FINE NOT PERFECT */
+/* 2023-03-02 evaluation: sometimes .is-flashing circle appears cut off at top when under heading */
+/*** Highlight headings are when you click an anchor link and it takes you there and flashes briefly ***/
+.markdown-preview-section > div.is-flashing {
+  transition: background-position-x .7s ease-in-out, background-image .7s ease-in-out, background-color .7s ease-in-out, padding .7s ease, margin .7s ease;
+  margin-left: -50px;
+  padding-left: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23FFCF99' fill-rule='evenodd' d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm-.9 3.9h.1l3.5 3.5c.3.3.3.8 0 1.1v.1l-3.5 3.5A.9.9 0 0 1 6 10.9L8.9 8 6 5.2A.9.9 0 0 1 5.9 4c.4-.4.9-.4 1.2-.1Z'/%3E%3C/svg%3E");
+  /*background-image: url('assets/images/ephemera-highlight.svg');*/
+  background-repeat: no-repeat;
+  background-position-x: 23px;
+  background-position-y: 8px;
+}
+.markdown-preview-section .is-flashing h1,
+.markdown-preview-section .is-flashing h2,
+.markdown-preview-section .is-flashing h3,
+.markdown-preview-section .is-flashing h4,
+.markdown-preview-section .is-flashing h5 {
+  color: var(--text-highlight);
+  text-shadow: 0 0 4px var(--text-highlight-glow);
+  transition: color .7s ease, text-shadow .7s ease;
+}
+/* Unhighlight headings */
+.markdown-preview-section > div {
+  transition: background-position-x .7s ease-in-out, background-image .7s ease-in-out, background-color .7s ease-in-out, padding .7s ease, margin .7s ease;
+  /* 2023-08-21 this used to have this border radius but I don't know why and it messes with tables */
+  /* border-radius: 14px; */
+}
+.markdown-preview-section h1,
+.markdown-preview-section h2,
+.markdown-preview-section h3,
+.markdown-preview-section h4,
+.markdown-preview-section h5 {
+  transition: color .7s ease, text-shadow .7s ease;
+}
+

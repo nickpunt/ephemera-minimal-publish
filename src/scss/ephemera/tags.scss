@@ -1,0 +1,25 @@
+/* 2023-12-26 Taken from 2023 Ephemera css */
+
+.markdown-preview-view .tag:not(.token) {
+  font-family: var(--ephemera-font-sans);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 6px 10px 5px;
+  border-radius: 6px;
+  color: #dae0e7;
+  background-color: var(--tag-background-color);
+  font-size: 0.65em;
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+.markdown-preview-view .tag:not(.token):hover {
+  background-color: var(--tag-background-hover);
+}
+
+@media screen and (max-width: 750px) {
+  .markdown-preview-view .tag:not(.token) {
+    padding: 5px 6px 4px;
+  }
+}
+

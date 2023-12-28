@@ -1,0 +1,14 @@
+/* 2023-12-26 Imported from 2023 Ephemera css */ 
+/* ✅ Lists GOOD */
+ol > li::marker {
+  font-family: var(--ephemera-font-sans);
+  font-weight: 700;
+  color: var(--list-marker-color);
+}
+ul > li::marker {
+  color: var(--list-marker-color);
+}
+ol > li::marker:hover,
+ul > li::marker:hover {
+  color: var(--list-marker-color-hover);
+}
